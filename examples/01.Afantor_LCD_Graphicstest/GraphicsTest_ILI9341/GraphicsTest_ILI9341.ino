@@ -12,7 +12,7 @@
   Written by Limor Fried/Ladyada for Adafruit Industries.
   MIT license, all text above must be included in any redistribution
  ****************************************************/
-#include "Afant_configuration.h"      
+#include "Afantor.h"      
 
 // Use hardware SPI (on ESP D4 and D8 as above)
 //Afant_ILI9341 tft = Afant_ILI9341(_LCD_CS_PIN, _LCD_DC_PIN);
@@ -123,9 +123,11 @@ unsigned long testText()
     tft.fillScreen(ILI9341_BLACK);
     unsigned long start = micros();
     tft.setCursor(0, 0);
-    tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(1);
+    tft.setTextColor(ILI9341_WHITE);  
+    tft.setTextSize(1);
     tft.println("Hello World!");
-    tft.setTextColor(ILI9341_YELLOW); tft.setTextSize(2);
+    tft.setTextColor(ILI9341_YELLOW); 
+    tft.setTextSize(2);
     tft.println(1234.56);
     tft.setTextColor(ILI9341_RED);    tft.setTextSize(3);
     tft.println(0xDEADBEEF, HEX);
@@ -159,9 +161,11 @@ unsigned long testLines(uint16_t color)
     x1 = y1 = 0;
     y2    = h - 1;
     start = micros();
-    for(x2=0; x2<w; x2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(x2=0; x2<w; x2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     x2    = w - 1;
-    for(y2=0; y2<h; y2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(y2=0; y2<h; y2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     t     = micros() - start; // fillScreen doesn't count against timing
     
     yield();
@@ -172,9 +176,11 @@ unsigned long testLines(uint16_t color)
     y1    = 0;
     y2    = h - 1;
     start = micros();
-    for(x2=0; x2<w; x2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(x2=0; x2<w; x2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     x2    = 0;
-    for(y2=0; y2<h; y2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(y2=0; y2<h; y2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     t    += micros() - start;
 
     yield();
@@ -185,9 +191,11 @@ unsigned long testLines(uint16_t color)
     y1    = h - 1;
     y2    = 0;
     start = micros();
-    for(x2=0; x2<w; x2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(x2=0; x2<w; x2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     x2    = w - 1;
-    for(y2=0; y2<h; y2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(y2=0; y2<h; y2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     t    += micros() - start;
     
     yield();
@@ -198,9 +206,11 @@ unsigned long testLines(uint16_t color)
     y1    = h - 1;
     y2    = 0;
     start = micros();
-    for(x2=0; x2<w; x2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(x2=0; x2<w; x2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     x2    = 0;
-    for(y2=0; y2<h; y2+=6) tft.drawLine(x1, y1, x2, y2, color);
+    for(y2=0; y2<h; y2+=6) 
+      tft.drawLine(x1, y1, x2, y2, color);
     
     yield();
     return micros() - start;

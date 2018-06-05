@@ -13,7 +13,7 @@
   MIT license, all text above must be included in any redistribution
  ****************************************************/
 
-#include "Afant_configuration.h"
+#include "Afantor.h"
 
 // Use hardware SPI
 Afant_ILI9341 tft = Afant_ILI9341(_LCD_CS_PIN, _LCD_DC_PIN, _LCD_RST_PIN);

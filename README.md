@@ -34,24 +34,24 @@ No need of reinstalling any drivers if were installed before, they should be upd
 #### Using Git (most environments)
 ```sh
 cd ~/Documents/Arduino/libraries/
-git clone https://github.com/Afantor/Afantor-Core.git
+git clone https://github.com/Afantor/Afantor-ESP32.git
 ```
 
 #### Using Git (Windows)
 ```sh
 c:
 cd %USERPROFILE%\documents\libraries
-git clone https://github.com/Afantor/Afantor-Core.git
+git clone https://github.com/Afantor/Afantor-ESP32.git
 ```
 
 ## API
-See [API](https://github.com/Afantor).
+See [API](https://github.com/m5stack/M5Stack/blob/master/src/M5Stack.h#L19).
 
 ## Examples
 See [examples](examples) folder.
 
 ## Hardware
-[Schematic](https://github.com/Afantor/Core_SCH.pdf).
+[Schematic](https://github.com/m5stack/M5-hardware/blob/master/M5_Core_SCH(20171206).pdf).
 
 ### Pinout
 Peripheral|Devices | ESP32 

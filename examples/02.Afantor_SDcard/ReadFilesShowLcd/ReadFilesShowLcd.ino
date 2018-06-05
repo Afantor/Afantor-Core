@@ -18,7 +18,7 @@
      
  */
  
-#include "Afant_configuration.h"
+#include "Afantor.h"
 
 File myFile;
 // Use hardware SPI (on ESP D4 and D8 as above)

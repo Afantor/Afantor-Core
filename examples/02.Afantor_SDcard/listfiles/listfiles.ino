@@ -21,7 +21,7 @@
  This example code is in the public domain.
 
  */
-#include "Afant_configuration.h"
+#include "Afantor.h"
 
 File root;
 

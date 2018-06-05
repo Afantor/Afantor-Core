@@ -16,7 +16,7 @@
 
  */
  // include the SD library:
-#include "Afant_configuration.h"
+#include "Afantor.h"
 
 // set up variables using the SD utility library functions:
 Sd2Card card;

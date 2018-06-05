@@ -20,7 +20,7 @@
 
  */
 
-#include "Afant_configuration.h"
+#include "Afantor.h"
 
 void setup() 
 {
