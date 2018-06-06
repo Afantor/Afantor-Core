@@ -34,6 +34,7 @@
         Afant.update();
 
     LCD:
+        Afant.LCD.begin();
         Afant.LCD.setBrightness(uint8_t brightness);
         Afant.LCD.drawPixel(int16_t x, int16_t y, uint16_t color);
         Afant.LCD.drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color);
@@ -82,42 +83,77 @@
         Afant.Speaker.setBeep(uint16_t frequency, uint16_t duration);
         Afant.Speaker.mute();
 
- * Afant_ILI9341 tft = Afant_ILI9341(_LCD_CS_PIN, _LCD_DC_PIN, _LCD_MOSI_PIN, _LCD_SCLK_PIN, _LCD_RST_PIN);
- * tft.begin();
- * uint8_t x = tft.readcommand8(ILI9341_RDMODE);
- * tft.fillScreen(ILI9341_BLACK);
- * tft.setCursor(0, 0);
- * tft.setTextColor(ILI9341_WHITE);  
- * tft.setTextSize(1);
- * tft.println("Hello World!");
- * tft.println(1234.56);
- * tft.println(0xDEADBEEF, HEX);
- * w = tft.width();
- * h = tft.height();
- * tft.drawLine(x1, y1, x2, y2, color);
- * tft.drawFastHLine(0, y, w, color1);
- * tft.drawFastVLine(x, 0, h, color2);
- * tft.drawRect(cx-i2, cy-i2, i, i, color);
- * tft.fillCircle(x, y, radius, color);
- * tft.drawCircle(x, y, radius, color);
- * tft.color565(i, i, i);
- * tft.drawTriangle(
-      cx    , cy - i, // peak
-      cx - i, cy + i, // bottom left
-      cx + i, cy + i, // bottom right
-      tft.color565(i, i, i));
- * tft.fillTriangle(cx, cy - i, cx - i, cy + i, cx + i, cy + i, tft.color565(0, i*10, i*10));
- * tft.drawRoundRect(cx-i2, cy-i2, i, i, i/8, tft.color565(i, 0, 0));
- * tft.fillRoundRect(cx-i2, cy-i2, i, i, i/8, tft.color565(0, i, 0));
+    MPU6050:
+        Afant.IMU.begin();
+        Afant.IMU.update();
+        Afant.IMU.getAngleX();
+        Afant.IMU.getAngleY();
+        Afant.IMU.getAngleZ();
+        Afant.IMU.getGyroX();
+        Afant.IMU.getGyroY();
+        Afant.IMU.getGyroZ();
+        Afant.IMU.getTemperature();
+
+    SDCard：
+        Afant.SDCard.init();
+
  */
 #ifndef _Afantor_H
 #define _Afantor_H
 
-#include "SPI.h"
+
+
+
+#if defined(ESP32)
+
+
+#include <Arduino.h>
+#include <Wire.h>
+#include <SPI.h>
+
 #include "utility/bmp_map.h"
 #include "Adafruit_GFX.h"
 #include "Afant_ILI9341.h"
 #include "Afant_SD.h"
 #include "Afant_Pin.h"
+
+
+
+
+class Afantor {
+
+ public:
+    void begin(bool LCDEnable=true, bool SDEnable=true);
+    void update();
+
+    void setWakeupButton(uint8_t button);
+    void powerOFF();
+
+    // Button API
+    // #define DEBOUNCE_MS 5
+    // Button BtnA = Button(BUTTON_A_PIN, true, DEBOUNCE_MS);
+
+    // SPEAKER
+    // SPEAKER Speaker;
+
+    // LCD
+    
+
+    // UART
+    // HardwareSerial Serial0 = HardwareSerial(0);
+    // HardwareSerial Serial2 = HardwareSerial(2);
+
+
+ private:
+    uint8_t _wakeupPin;
+};
+
+extern Afantor Afant;
+#define af Afant
+#define lcd Lcd
+
+#else
+#error “This library only supports boards with ESP32 processor.”
+#endif
 
 #endif // _Afantor_H
