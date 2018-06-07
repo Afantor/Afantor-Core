@@ -1,14 +1,14 @@
 {
   "name": "Afantor",
-  "description": "An ESP32 Arduino board",
+  "description": "A ESP32 Core board,support Arduino and micropython.",
   "keywords": "Afantor",
   "authors": {
     "name": "BlueGod, Afantor",
-    "url": "https://github.com/Afantor/Afantor-ESP32.git"
+    "url": "https://www.afantor.cc"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Afantor/Afantor-ESP32.git"
+    "url": "https://github.com/Afantor/Afantor-Core.git"
   },
   "version": "0.1.0",
   "framework": "arduino",

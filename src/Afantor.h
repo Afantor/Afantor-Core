@@ -110,11 +110,12 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
+#include <FS.h>
+#include <SD.h>
 
 #include "utility/bmp_map.h"
 #include "Adafruit_GFX.h"
 #include "Afant_ILI9341.h"
-#include "Afant_SD.h"
 #include "Afant_Pin.h"
 
 

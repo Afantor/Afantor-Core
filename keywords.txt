@@ -18,34 +18,35 @@
  */
 
 Afantor 	KEYWORD3
-Afant       KEYWORD3
+Afant       	KEYWORD3
 af 	        KEYWORD3
-display	KEYWORD1
-buttons	KEYWORD1
+display		KEYWORD1
+buttons		KEYWORD1
 
 ////////////////////////core
-begin	KEYWORD1
-update	KEYWORD1
+begin		KEYWORD1
+update		KEYWORD1
 startupLogo	KEYWORD1
-Speaker	KEYWORD1
-Lcd	KEYWORD1
+Speaker		KEYWORD1
+Lcd		KEYWORD1
 
 ////////////////////////buttons
-pressed	KEYWORD1
+pressed		KEYWORD1
 released	KEYWORD1
-held	KEYWORD1
-repeat	KEYWORD1
+held		KEYWORD1
+repeat		KEYWORD1
 timeHeld	KEYWORD1
-BTN_A 	LITERAL1
-BTN_B 	LITERAL1
-BTN_C 	LITERAL1
-LED_PIN	LITERAL1
+BTN_A 		LITERAL1
+BTN_B 		LITERAL1
+BTN_C 		LITERAL1
+BTN_D 		LITERAL1
+LED_PIN		LITERAL1
 
 ////////////////////////Display
 getBuffer	KEYWORD1
 setContrast	KEYWORD1
-clear	KEYWORD1
-update	KEYWORD1
+clear		KEYWORD1
+update		KEYWORD1
 fillScreen	KEYWORD1
 persistence	KEYWORD1
 setColor	KEYWORD1
@@ -66,19 +67,19 @@ drawTriangle	KEYWORD1
 fillTriangle	KEYWORD1
 drawBitmap	KEYWORD1
 drawChar	KEYWORD1
-print	KEYWORD1
-cursorX	KEYWORD1
-cursorY	KEYWORD1
+print		KEYWORD1
+cursorX		KEYWORD1
+cursorY		KEYWORD1
 fontSize	KEYWORD1
 textWrap	KEYWORD1
 fontWidth	KEYWORD1
 fontHeight	KEYWORD1
-setFont	KEYWORD1
+setFont		KEYWORD1
 
-WHITE 	LITERAL1
-BLACK 	LITERAL1
-INVERT 	LITERAL1
-GRAY 	LITERAL1
-RED 	LITERAL1
-BLUE 	LITERAL1
-GREEN 	LITERAL1
+WHITE 		LITERAL1
+BLACK 		LITERAL1
+INVERT 		LITERAL1
+GRAY 		LITERAL1
+RED 		LITERAL1
+BLUE 		LITERAL1
+GREEN 		LITERAL1
